@@ -1,8 +1,66 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<form runat="server" id="login" enctype="multipart/form-data">
+    <div>
+        <div class="all">
+            <div class="fix1 container">
+                <div class="logo-wrap">
+                    <img class="img-logo" src="/Assets/images/ic_logo_white.png" />
+                </div>
+                <div class="bg">
+                    <div class="form-horizontal">
+                        <div class="form-group fix2">
+                            <div class=" viet fixcol col-sm-10">
+                                <input type="text" id="username" placeholder="Tên đăng nhập ..." spellcheck="false" class="fixform form-control" runat="server" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="form-group fix2">
+                            <div class="viet fixcol col-sm-10">
+                                <input type="password" class="fixform1 form-control" id="password" placeholder="Mật khẩu ..." runat="server" autocomplete="off" />
+                            </div>
+                        </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+                        <div class="lb fix2">
+                            <div class="fixlb form-group fix2">
+                                <div class="fixcol col-sm-offset-2 col-sm-10">
+                                    <div class="fixcheckbox checkbox">
+                                        <label>
+                                            <a href="#" style="color: #b9b9b9;" onclick="ShowModal()">Quên mật khẩu?</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group fix2">
+                            <div class="fixcol viet col-sm-offset-2 col-sm-10">
+                                <asp:Button ID="submit" CssClass="fixbtn fix4 btn btn-default fix3" runat="server" Text="ĐĂNG NHẬP" OnClick="Btn_Login" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ndung">
+                    <p class="nd" style="font-size: 14px;">30Shine tin tưởng, nỗ lực mỗi ngày để kết nối bàn tay tài hoa của người Việt cùng quy trình khoa học 30 phút nhằm đem đến cho phái mạnh toàn cầu kiểu tóc đẹp trai, làn da khỏe mạnh cuốn hút phái đẹp; tinh thần thư giãn để bứt phá trong công việc</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Quên mật khẩu?</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-forget">
+                        <label for="username">Tài khoản của bạn:</label>
+                        <input type="text" runat="server" id="UserNameSend" name="username" class="form-control username fixform" placeholder="example" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="BtnComplete" CssClass="fixbtn fix4 btn btn-default fix3" runat="server" OnClick="BtnForgotPassword" Text="Xác nhận" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
