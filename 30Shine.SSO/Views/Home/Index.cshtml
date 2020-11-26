@@ -1,4 +1,4 @@
-﻿<form runat="server" id="login" enctype="multipart/form-data">
+﻿<form id="login">
     <div>
         <div class="all">
             <div class="fix1 container">
@@ -9,12 +9,12 @@
                     <div class="form-horizontal">
                         <div class="form-group fix2">
                             <div class=" viet fixcol col-sm-10">
-                                <input type="text" id="username" placeholder="Tên đăng nhập ..." spellcheck="false" class="fixform form-control" runat="server" autocomplete="off" />
+                                <input name="username" type="text" id="username" placeholder="Tên đăng nhập ..." spellcheck="false" class="fixform form-control" autocomplete="off">
                             </div>
                         </div>
                         <div class="form-group fix2">
                             <div class="viet fixcol col-sm-10">
-                                <input type="password" class="fixform1 form-control" id="password" placeholder="Mật khẩu ..." runat="server" autocomplete="off" />
+                                <input name="password" type="password" id="password" class="fixform1 form-control" placeholder="Mật khẩu ..." autocomplete="off">
                             </div>
                         </div>
 
@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group fix2">
                             <div class="fixcol viet col-sm-offset-2 col-sm-10">
-                                <asp:Button ID="submit" CssClass="fixbtn fix4 btn btn-default fix3" runat="server" Text="ĐĂNG NHẬP" OnClick="Btn_Login" />
+                                <input type="submit" name="submit" value="ĐĂNG NHẬP" id="submit" class="fixbtn fix4 btn btn-default fix3">
                             </div>
                         </div>
                     </div>
@@ -54,11 +54,11 @@
                 <div class="modal-body">
                     <div class="form-forget">
                         <label for="username">Tài khoản của bạn:</label>
-                        <input type="text" runat="server" id="UserNameSend" name="username" class="form-control username fixform" placeholder="example" autocomplete="off" />
+                        <input name="UserNameSend" type="text" id="UserNameSend" class="form-control username fixform" placeholder="example" autocomplete="off">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <asp:Button ID="BtnComplete" CssClass="fixbtn fix4 btn btn-default fix3" runat="server" OnClick="BtnForgotPassword" Text="Xác nhận" />
+                    <input type="submit" name="BtnComplete" value="Xác nhận" id="BtnComplete" class="fixbtn fix4 btn btn-default fix3">
                 </div>
             </div>
         </div>
